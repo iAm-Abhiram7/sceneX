@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Forensic AI",
+    "slug": "forensic-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "forensic-ai",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F3EF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.forensicai.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to your camera to capture evidence photos.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to select evidence photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F5F3EF"
+      },
+      "package": "com.forensicai.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Forensic AI to access your photos to analyze evidence.",
+          "cameraPermission": "Allow Forensic AI to access your camera to capture evidence photos."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
